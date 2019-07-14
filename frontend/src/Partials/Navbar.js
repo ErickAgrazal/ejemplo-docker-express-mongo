@@ -32,27 +32,24 @@ export default class TopNavbar extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
+          <NavbarBrand href="/">Proyecto</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem className="mr-auto">
-                <NavLink href="/preguntas/">Preguntas</NavLink>
-              </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Options
+                  Preguntas
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    Option 1
+                    Listado
                   </DropdownItem>
                   <DropdownItem>
-                    Option 2
+                    Crear
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    Reset
+                    Limpiar
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>

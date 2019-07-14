@@ -1,16 +1,18 @@
 import React from 'react';
 import MainContainer from './Partials/Container';
-import QuestionsForm from './Preguntas/Form';
+import QuestionsForm from './Questions/Form';
+import QuestionsList from './Questions/List';
 import TopNavbar from './Partials/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
-  const questionForm = <QuestionsForm/>
+  const questionForm = <QuestionsForm/>;
+  const questionsList = <QuestionsList/>;
   return (
     <div className="App">
       < TopNavbar />
-      <MainContainer content={questionForm} />
+      <MainContainer content={questionsList} />
     </div>
   );
 }
