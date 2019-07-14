@@ -1,0 +1,54 @@
+version: '3.1'
+
+services:
+  db:
+    build:
+      context: .
+      dockerfile: ./docker/mongodb/Dockerfile
+    container_name: proyecto_db01
+    env_file:
+     - ./.env
+    hostname: proyecto_db01
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo-data:/data/db
+    restart: always
+  backend:
+    build:
+      context: .
+      dockerfile: ./docker/backend/Dockerfile
+    container_name: proyecto_backend_ex01
+    command: bash -c "npm install && npm start"
+    depends_on:
+      - db
+    env_file:
+     - ./.env
+    hostname: proyecto_backend_ex01
+    links:
+      - db
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./backend:/code
+      - /code/node_modules
+    restart: always
+  # frontend:
+  #   build:
+  #     context: .
+  #     dockerfile: ./docker/nlu/Dockerfile
+  #   container_name: proyecto_nlu_ex01
+  #   command: bash -c "npm install && nodemon app.js"
+  #   depends_on:
+  #     - db
+  #   env_file:
+  #    - ./.env
+  #   hostname: proyecto_nlu_ex01
+  #   links:
+  #     - db
+  #   ports:
+  #     - "3001:3001"
+  #   volumes:
+  #     - ./nlu:/code
+  #     - /code/node_modules
+  #   restart: always
