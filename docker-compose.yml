@@ -33,22 +33,22 @@ services:
       - ./backend:/code
       - /code/node_modules
     restart: always
-  # frontend:
-  #   build:
-  #     context: .
-  #     dockerfile: ./docker/nlu/Dockerfile
-  #   container_name: proyecto_nlu_ex01
-  #   command: bash -c "npm install && nodemon app.js"
-  #   depends_on:
-  #     - db
-  #   env_file:
-  #    - ./.env
-  #   hostname: proyecto_nlu_ex01
-  #   links:
-  #     - db
-  #   ports:
-  #     - "3001:3001"
-  #   volumes:
-  #     - ./nlu:/code
-  #     - /code/node_modules
-  #   restart: always
+  frontend:
+    build:
+      context: .
+      dockerfile: ./docker/frontend/Dockerfile
+    container_name: proyecto_frontend_ex01
+    command: bash -c "yarn && yarn start"
+    depends_on:
+      - db
+    env_file:
+     - ./.env
+    hostname: proyecto_frontend_ex01
+    links:
+      - db
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/code
+      - /code/node_modules
+    restart: always

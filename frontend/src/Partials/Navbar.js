@@ -5,12 +5,11 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem } from 'reactstrap';
+
 
 export default class TopNavbar extends React.Component {
   constructor(props) {
@@ -42,10 +41,10 @@ export default class TopNavbar extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    Listado
+                    <a href="/preguntas">Listado</a>
                   </DropdownItem>
                   <DropdownItem>
-                    Crear
+                    <a href="/preguntas/crear">Crear</a>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>

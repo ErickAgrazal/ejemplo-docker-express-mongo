@@ -3,7 +3,7 @@ LABEL MAINTAINER="Erick Agrazal erick.agrazal@balboadevelopers.com"
 RUN mkdir /code/
 
 ADD ./frontend/package.json /code/package.json
-RUN npm install -g nodemon
+RUN npm install -g nodemon react-scripts
 RUN npm install --verbose
 
 ADD ./frontend/ /code/
