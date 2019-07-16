@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 import QuestionsForm from './Form';
 import QuestionsList from './List';
 
-export default function QuesitonSwitch() {
+export default function QuestionSwitch() {
   return (
     <Switch>
       <Route exact path='/preguntas' component={QuestionsList}/>
