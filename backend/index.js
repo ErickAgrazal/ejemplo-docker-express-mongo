@@ -15,6 +15,7 @@ app.use(cors());
 
 // api routes
 app.use('/preguntas', require('./questions/questions.controller'));
+app.use('/usuarios', require('./users/users.controller'));
 
 // global error handler
 app.use(errorHandler);
