@@ -11,6 +11,7 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
 
+  import { AppProvider, AppConsumer } from '../App/'
 
 export default class TopNavbar extends React.Component {
   constructor(props) {
@@ -29,10 +30,15 @@ export default class TopNavbar extends React.Component {
   }
 
   render() {
+    function Page(props) {
+      const user = props.user;
+    }
     return (
+
       <div>
+        {  }
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">Proyecto</NavbarBrand>
+          <NavbarBrand href="/">NutriHelp</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
