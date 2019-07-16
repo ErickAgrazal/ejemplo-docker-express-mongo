@@ -5,6 +5,7 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
+  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -52,6 +53,14 @@ export default class TopNavbar extends React.Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
+              <NavLink href="http://localhost:3000/usuarios/autenticar">
+                {" "}
+                Iniciar{" "}
+              </NavLink>
+              <NavLink href="http://localhost:3000/usuarios/registrar">
+                {" "}
+                Registrar{" "}
+              </NavLink>
             </Nav>
           </Collapse>
         </Navbar>

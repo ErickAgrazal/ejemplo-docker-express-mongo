@@ -36,7 +36,11 @@ export default class AuthForm extends React.Component {
       );
     })
     .catch(function (error) {
-      console.log(error);
+      Swal.fire(
+        `¡ERROR!`,
+        `El usuario no se ha podido AUTENTIFICAR`,
+        'error'
+      );
     });
   }
 

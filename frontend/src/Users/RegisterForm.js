@@ -46,7 +46,11 @@ export default class RegisterForm extends React.Component {
       );
     })
     .catch(function (error) {
-      console.log(error);
+      Swal.fire(
+        `¡ERROR!`,
+        `El usuario no se ha podido REGISTRAR`,
+        'error'
+      );
     });
   }
 
