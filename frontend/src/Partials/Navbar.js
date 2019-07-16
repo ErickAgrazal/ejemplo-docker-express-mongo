@@ -11,7 +11,7 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
 
-  import { AppProvider, AppConsumer } from '../App/'
+  //import { AppProvider, AppConsumer } from '../App'
 
 export default class TopNavbar extends React.Component {
   constructor(props) {
@@ -30,9 +30,7 @@ export default class TopNavbar extends React.Component {
   }
 
   render() {
-    function Page(props) {
-      const user = props.user;
-    }
+    
     return (
 
       <div>
