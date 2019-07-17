@@ -46,7 +46,11 @@ export default class RegisterForm extends React.Component {
       );
     })
     .catch(function (error) {
-      console.log(error);
+      Swal.fire(
+        `¡ERROR!`,
+        `El usuario no se ha podido REGISTRAR`,
+        'error'
+      );
     });
   }
 
@@ -74,7 +78,7 @@ export default class RegisterForm extends React.Component {
               <Label for="lastName">Apellido</Label>
               <Input type="text" name="lastName" id="lastName" placeholder="Apellido" onChange={this.setLastName} />
             </FormGroup>
-          <Button onClick={this.submit} >Enviar</Button>
+          <Button color="primary" onClick={this.submit} >Enviar</Button>
           </Form>
         </CardBody>
       </Card>

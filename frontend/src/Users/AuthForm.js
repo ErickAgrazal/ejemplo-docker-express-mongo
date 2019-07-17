@@ -36,9 +36,15 @@ export default class AuthForm extends React.Component {
       );
     })
     .catch(function (error) {
-      console.log(error);
+      Swal.fire(
+        `¡ERROR!`,
+        `El usuario no se ha podido AUTENTIFICAR`,
+        'error'
+      );
     });
   }
+
+ 
 
   render() {
     return (
@@ -55,7 +61,7 @@ export default class AuthForm extends React.Component {
               <Label for="password">Contraseña</Label>
               <Input type="password" name="password" id="password" placeholder="Contraseña" onChange={this.setPassword} />
             </FormGroup>
-          <Button onClick={this.submit} >Enviar</Button>
+          <Button color="primary" onClick={this.submit} >Enviar</Button>
           </Form>
         </CardBody>
       </Card>
