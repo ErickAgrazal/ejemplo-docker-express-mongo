@@ -8,10 +8,6 @@ import UserSwitch from './Users/Switch';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const AppContext = React.createContext({})
-export const AppProvider = AppContext.Provider
-export const AppConsumer = AppContext.Consumer
-
 function App() {
   return (
     <div className="App">

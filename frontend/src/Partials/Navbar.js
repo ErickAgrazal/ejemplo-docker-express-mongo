@@ -11,8 +11,8 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
 
-  //import { AppProvider, AppConsumer } from '../App'
-
+  import * as Context from '../Context/index';
+  
 export default class TopNavbar extends React.Component {
   constructor(props) {
     super(props);
@@ -32,7 +32,7 @@ export default class TopNavbar extends React.Component {
   render() {
     
     return (
-
+      
       <div>
         {  }
         <Navbar color="light" light expand="md">
@@ -40,6 +40,8 @@ export default class TopNavbar extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
+            
+            
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Preguntas
@@ -53,8 +55,9 @@ export default class TopNavbar extends React.Component {
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    Limpiar
+                    <a>Ver Respuestas</a>
                   </DropdownItem>
+                  
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavLink href="http://localhost:3000/usuarios/autenticar">
@@ -65,10 +68,13 @@ export default class TopNavbar extends React.Component {
                 {" "}
                 Registrar{" "}
               </NavLink>
+            
+            
             </Nav>
           </Collapse>
         </Navbar>
       </div>
+
     );
   }
 }
