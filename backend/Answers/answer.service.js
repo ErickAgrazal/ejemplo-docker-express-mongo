@@ -1,15 +1,15 @@
-const { Question } = require('_helpers/db');
+const { Answer } = require('_helpers/db');
 
 function getAll() {
-  return Question.find().select('name id');
+  return Answer.find().select('name id');
 }
 
 function getById(id) {
-  return Question.findById(id).select('name id');
+  return Answer.findById(id).select('name id');
 }
 
 function create(options) {
-  return Question.create(options);
+  return Answer.create(options);
 }
 
 async function update(id, { name }) {
@@ -19,7 +19,7 @@ async function update(id, { name }) {
 }
 
 async function remove(id) {
-  return Question.findByIdAndRemove(id);
+  return Answer.findByIdAndRemove(id);
 }
 
 
