@@ -7,7 +7,7 @@ export default function AnswerSwitch() {
   return (
     <Switch>
       <Route exact path='/respuestas' component={AnswerList}/>
-      <Route path='/respeustas/crear' component={AnswerForm}/>
+      <Route path='/respuestas/crear' component={AnswerForm}/>
       <Route path='/respuestas/:id' component={AnswerForm}/>
     </Switch>
   );

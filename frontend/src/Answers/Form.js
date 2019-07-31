@@ -72,7 +72,7 @@ export default class AnswersForm extends React.Component {
           <CardSubtitle><strong>Formulario de respuestas del sistema</strong></CardSubtitle>
           <Form className="mt-4">
             <FormGroup>
-              <Label for="preguntaName">Introduzca la pregunta</Label>
+              <Label for="preguntaName">Introduzca la respuesta</Label>
               <Input type="text" name="name" id="preguntaName" placeholder="Agregar respuesta" onChange={this.setName} defaultValue={ this.state.answer } />
             </FormGroup>
           <Button onClick={this.submit} >Enviar</Button>

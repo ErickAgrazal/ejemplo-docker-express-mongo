@@ -1,1 +1,1 @@
-module.exports = require('./anwer.model');
+module.exports = require('./answer.model');
