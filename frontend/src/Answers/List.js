@@ -66,7 +66,8 @@ export default class AnswerList extends React.Component {
           {
             this.state.answers ? this.state.answers.map((v, i) => (
               <tr key={i}>
-                <td><a href={`/respuestas/${v.id}`}> {v.name}</a></td>
+              <td><a href={`/preguntas/${v.id}`}> {v.name}</a></td>
+                <td><a href={`/respuestas/${v.id}`}> {v.answer}</a></td>
                 <td><button className="btn btn-danger" href={`/respuestas/${v.id}`} onClick={this.deleteAnswerFactory(i, v.id)} data-index={i}> &times; Eliminar</button></td>
               </tr>
             )) : []
