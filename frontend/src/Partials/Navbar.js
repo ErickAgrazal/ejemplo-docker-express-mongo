@@ -55,7 +55,10 @@ export default class TopNavbar extends React.Component {
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    <a href="/respuestas/crear">Ver Respuestas</a>
+                    <a href="/respuestas/crear">Responder</a>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <a href="/respuestas">Ver Respuestas</a>
                   </DropdownItem>
                   
                 </DropdownMenu>

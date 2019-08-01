@@ -50,14 +50,14 @@ export default class AnswersForm extends React.Component {
     if (id) {
       this.postAnswer({
         fn: axios.put,
-        url: `http://localhost:4000/respuestas/${id}`,
+        url: `http://localhost:4000/Respuestas/${id}`,
         params: { answer: this.state.answer},
         type: 'ACTUALIZADO'
       });
     } else {
       this.postAnswer({
         fn: axios.post,
-        url: 'http://localhost:4000/respuestas',
+        url: 'http://localhost:4000/Respuestas',
         params: { answer: this.state.answer},
         type: 'AGREGADO'
       });

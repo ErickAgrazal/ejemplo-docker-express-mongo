@@ -15,7 +15,7 @@ app.use(cors());
 
 // api routes
 app.use('/preguntas', require('./questions/questions.controller'));
-app.use('/respuestas', require('./Answers/answers.controller'));
+app.use('/Respuestas', require('./Answers/answers.controller'));
 app.use('/usuarios', require('./users/users.controller'));
 
 

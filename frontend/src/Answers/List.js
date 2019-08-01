@@ -13,7 +13,7 @@ export default class AnswerList extends React.Component {
     }
   }
   componentDidMount = () => {
-    axios.get('http://localhost:4000/respuestas/')
+    axios.get('http://localhost:4000/Respuestas/')
     .then((response) => this.setState({ answers: response.data.answers }))
     .catch((error) => console.log(error));
   }
@@ -37,7 +37,7 @@ export default class AnswerList extends React.Component {
         cancelButtonText: '¡Nope!'
       }).then((result) => {
         if (result.value) {
-          axios.delete(`http://localhost:4000/respuestas/${documentId}`)
+          axios.delete(`http://localhost:4000/Respuestas/${documentId}`)
           .then((response) => {
             this.deleteRow(i);
             Swal.fire(
@@ -66,7 +66,6 @@ export default class AnswerList extends React.Component {
           {
             this.state.answers ? this.state.answers.map((v, i) => (
               <tr key={i}>
-              <td><a href={`/preguntas/${v.id}`}> {v.name}</a></td>
                 <td><a href={`/respuestas/${v.id}`}> {v.answer}</a></td>
                 <td><button className="btn btn-danger" href={`/respuestas/${v.id}`} onClick={this.deleteAnswerFactory(i, v.id)} data-index={i}> &times; Eliminar</button></td>
               </tr>
