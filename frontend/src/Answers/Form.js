@@ -70,6 +70,15 @@ export default class AnswersForm extends React.Component {
         <CardBody>
           <CardTitle><h4>Respuestas</h4></CardTitle>
           <CardSubtitle><strong>Formulario de respuestas del sistema</strong></CardSubtitle>
+          
+          {
+            this.state.questions ? this.state.questions.map((v, i) => (
+              <tr key={i}>
+              <CardSubtitle> href={`http://localhost:4000/preguntas/${v.id}`}> {v.name} </CardSubtitle>
+              </tr>
+            )) : []
+          }
+          
           <Form className="mt-4">
             <FormGroup>
               <Label for="respuestaName">Introduzca la respuesta</Label>
