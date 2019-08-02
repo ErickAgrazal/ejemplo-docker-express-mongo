@@ -2,12 +2,17 @@ import React from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2'
 
+import * as Auth from '../Context/Context'
+
 import { Button,
          Form,
          FormGroup,
          Label,
          Input,
          Card, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
+
+
+export { Auth };
 
 export default class AuthForm extends React.Component {
   constructor(props){
@@ -48,13 +53,14 @@ export default class AuthForm extends React.Component {
 
   render() {
     return (
+      
       <Card>
         <CardBody>
           <CardTitle><h4>Login</h4></CardTitle>
           <CardSubtitle><strong>Iniciar sesión en el sistema</strong></CardSubtitle>
           <Form className="mt-4">
             <FormGroup>
-              <Label for="username">Nombre de usuario</Label>
+              <Label for="username">Nombre de usuario</Label>              
               <Input type="text" name="username" id="username" placeholder="Nombre de usuario" onChange={this.setUsername} />
             </FormGroup>
             <FormGroup>

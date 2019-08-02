@@ -5,12 +5,9 @@ import { Container, Row, Col } from 'reactstrap';
 import TopNavbar from './Partials/Navbar';
 import QuestionSwitch from './Questions/Switch';
 import UserSwitch from './Users/Switch';
+import AnswerSwitch from './Answers/Switch';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-const AppContext = React.createContext({})
-export const AppProvider = AppContext.Provider
-export const AppConsumer = AppContext.Consumer
 
 function App() {
   return (
@@ -24,6 +21,7 @@ function App() {
                 {/* <Route exact path="/" component={Home} /> */}
                 <Route path='/preguntas' component={QuestionSwitch}/>
                 <Route path='/usuarios' component={UserSwitch}/>
+                <Route path='/respuestas' component={AnswerSwitch}/>
               </Col>
             </Row>
           </Container>
